@@ -34,7 +34,7 @@
   changed_when: false
 
 - name: debian | rescanning for new disks added
-  command: /sbin/rescan-scsi-bus
+  command: /usr/bin/rescan-scsi-bus.sh
   become: true
   changed_when: false
   when: scsi_devices['stdout'] | length
